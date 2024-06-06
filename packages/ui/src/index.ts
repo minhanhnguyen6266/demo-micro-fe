@@ -1,5 +1,5 @@
-import Button from './Button'
-import Card from './Card'
+import ButtonAction from "./ButtonAction"
+import ContentCard from './ContentCard'
 import Text from './Text'
 
-export { Button, Card, Text }
+export { ButtonAction, ContentCard, Text }
