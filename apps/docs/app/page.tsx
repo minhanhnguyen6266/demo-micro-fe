@@ -6,14 +6,13 @@ export default function Page(): JSX.Element {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <p>examples/basic&nbsp;</p>
+        <p>TurboRepo</p>
         <div>
           <a
             href="https://vercel.com?utm_source=create-turbo&utm_medium=basic&utm_campaign=create-turbo"
             rel="noopener noreferrer"
             target="_blank"
           >
-            By{' '}
             <Image
               alt="Vercel Logo"
               className={styles.vercelLogo}
@@ -27,7 +26,7 @@ export default function Page(): JSX.Element {
       </div>
 
       <ButtonAction webName='https://turbo.build/repo/docs' buttonName='Link to TurboRepo'/>
-      <ContentCard />
+      {/* <ContentCard /> */}
       <Text />
       <div>DOCS APP</div>
     </main>

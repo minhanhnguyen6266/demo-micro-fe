@@ -5,7 +5,7 @@ interface ButtonActionProps {
   webName: string;
   buttonName: string
 }
-
+  
 const ButtonAction: React.FC<ButtonActionProps> = ({ webName, buttonName }) => {
   const clickOnButton = (webName: string): void => {
     window.open(webName);
@@ -20,7 +20,6 @@ const ButtonAction: React.FC<ButtonActionProps> = ({ webName, buttonName }) => {
           backgroundColor: "#F06167",
         },
       }}
-      variant="outlined"
       onClick={() => clickOnButton(webName)}
     >
       {buttonName}
