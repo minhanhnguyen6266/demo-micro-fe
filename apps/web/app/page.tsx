@@ -1,13 +1,14 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-import { add, subtract } from '@repo/math-helpers'
-import { ButtonAction, ContentCard, Text } from '@repo/ui'
-import { Typography } from '@mui/material'
+import Image from "next/image";
+import styles from "./page.module.css";
+import { add, subtract } from "@repo/math-helpers";
+import { ButtonAction, ContentCard, Text } from "@repo/ui";
+import { Typography } from "@mui/material";
+import { ROUTE_TO_DOCS } from "@repo/constant";
 
 export default function Page(): JSX.Element {
-  const addTwoNumber =  add(1, 9)
-  const subtractTwoNumber = subtract(11, 1)
-  
+  const addTwoNumber = add(1, 9);
+  const subtractTwoNumber = subtract(11, 1);
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -30,13 +31,21 @@ export default function Page(): JSX.Element {
         </div>
       </div>
 
-      <ButtonAction webName='https://nextjs.org/docs' buttonName='Link to NextJS'/>
-      {/* <ContentCard /> */}
+      <ButtonAction
+        webName="https://nextjs.org/docs"
+        buttonName="Link to NextJS"
+      />
+      <ContentCard
+        imageCard="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2023/07/hinh-dep.jpg"
+        titleCard="Hình Web App"
+        textCard="Lorem"
+        firstAction="DOCS"
+        firstLink={ROUTE_TO_DOCS}
+      />
       <Text />
       <div>WEB APP</div>
-      {/* <Typography>Tổng 2 số: {addTwoNumber}</Typography>
-      <Typography>Hiệu 2 số: {subtractTwoNumber}</Typography> */}
-
+      <Typography>Add: {addTwoNumber}</Typography>
+      <Typography>Subtract: {subtractTwoNumber}</Typography>
     </main>
-  )
+  );
 }
